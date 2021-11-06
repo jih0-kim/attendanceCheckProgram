@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+  <!-- css 불러오는 코드 , href : 파일 경로만 변함 -->
+  <link rel="stylesheet" href="A/style.css" type="text/css">
+  <script type="text/javascript" src="A/stu1.json"> </script>
+  <script type="text/javascript" src="A/stu2.json"> </script>
+  <script type="text/javascript" src="A/stu3.json"> </script>
+  <script type="text/javascript" src="A/stu4.json"> </script>
+  <script type="text/javascript" src="A/stu5.json"> </script>
+  <script type="text/javascript" src="A/stu6.json"> </script>
+  <script type="text/javascript">
+    function doDisplay() {
+      var con = document.getElementById("seat");
+      // document : html의 처음부터 끝까지 검색, ID("seat")를 가진 요소를 가져옴
+      if (con.style.display == "block") {
+        // style : css의 속성을 변경, display : 화면에 보여지는 것, 보인다면 감추기
+        con.style.display = "none";
+      } else {
+        con.style.display = "block";
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="clock">
+    <div class="date_box">
+      <h2>00/00</h2>
+      <!-- 변경은 자바스크립트에서 해줌. 형태만 설정 -->
+    </div>
+    <div class="time_box">
+      <h2>00:00</h2>
+    </div>
+  </div>
+
+  <div>
+    <table class="table">
+      <tr>
+        <th scope="row"><a href="javascript:doDisplay();" id="first" onclick=selectParamsFirst();>1교시</a></th>
+        <!-- 링크를 눌렀을 때, 이벤트를 발생 -->
+        <!-- id : 하나만 가질 수 있는, class : 비슷한 속성을 여러개 묶음, onclick : 클릭했을 때 함수 실행 -->
+        <div id="seat">
+          <h4>좌석 배치도</h4>
+          <div class="seat1 seat_common" id="1">seat1</div>
+          <div class="seat2 seat_common" id="2">seat2</div>
+          <div class="seat3 seat_common" id="3">seat3</div>
+          <div class="seat4 seat_common" id="4">seat4</div>
+          <div class="seat5 seat_common" id="5">seat5</div>
+          <div class="seat6 seat_common" id="6">seat6</div><br />
+          <div class="seat7 seat_common" id="7">seat7</div>
+          <div class="seat8 seat_common" id="8">seat8</div>
+          <div class="seat9 seat_common" id="9">seat9</div>
+          <div class="seat10 seat_common" id="10">seat10</div>
+          <div class="seat11 seat_common" id="11">seat11</div>
+          <div class="seat12 seat_common" id="12">seat12</div><br />
+          <div class="seat13 seat_common" id="13">seat13</div>
+          <div class="seat14 seat_common" id="14">seat14</div>
+          <div class="seat15 seat_common" id="15">seat15</div>
+          <div class="seat16 seat_common" id="16">seat16</div>
+          <div class="seat17 seat_common" id="17">seat17</div>
+          <div class="seat18 seat_common" id="18">seat18</div><br />
+          <div class="seat19 seat_common" id="19">seat19</div>
+          <div class="seat20 seat_common" id="20">seat20</div>
+          <div class="seat21 seat_common" id="21">seat21</div>
+          <div class="seat22 seat_common" id="22">seat22</div>
+          <div class="seat23 seat_common" id="23">seat23</div>
+          <div class="seat24 seat_common" id="24">seat24</div><br />
+          <div class="seatNO seat_common">no</div>
+          <div class="seatNO seat_common">no</div>
+          <div class="seatNO seat_common">no</div>
+          <div class="seatNO seat_common">no</div>
+          <div class="seat25 seat_common" id="25">seat25</div>
+          <div class="seat26 seat_common" id="26">seat26</div>
+        </div>
+        <td>10:00 ~ 10:50</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="javascript:doDisplay();" id="second" onclick=selectParamsSecond();>2교시</a></th>
+        <td>11:00 ~ 10:50</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="javascript:doDisplay();" id="third" onclick=selectParamsThird();>3교시</a></th>
+        <td>13:00 ~ 13:50</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="javascript:doDisplay();" id="fourth" onclick=selectParamsFourth();>4교시</a></th>
+        <td>14:00 ~ 14:50</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="javascript:doDisplay();" id="fifth" onclick=selectParamsFifth();>5교시</a></th>
+        <td>15:00 ~ 15:50</td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="javascript:doDisplay();" id="sixth" onclick=selectParamsSixth();>6교시</a></th>
+        <td>16:00 ~ 16:50</td>
+      </tr>
+    </table>
+  </div>
+  <div id="footer">
+    <div id="absence"></div>
+    <div id="attendance"></div>
+    <div id="late"></div>
+    <div id="run"></div>
+  </div>
+  <script src="A/index.js"></script>
+  <!-- html - css - javascript 순서로 적용됨 -->
+</body>
+
+</html>
